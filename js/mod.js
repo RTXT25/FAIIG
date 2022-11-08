@@ -13,12 +13,14 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "1.0",
+	num: "1.1",
 	name: "Only Fun times",
 }
 
-let changelog = `<h3>-Endgame At 1 HOUR???????? upgrade-</h3><br><br>
+let changelog = `<h3>-1 Month upgrade-</h3><br><br>
 	<h1>Changelog:</h1><br><br>
+	<h4>V1.1 Only Fun times</h4><br>
+		- Days Upgrade<br>
 	<h3>v1.0 Only Fun Times</h3><br>
 		- Added Days<br>
 		`
