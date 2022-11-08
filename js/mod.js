@@ -17,7 +17,7 @@ let VERSION = {
 	name: "Only Fun times",
 }
 
-let changelog = `<h3>-1 Month upgrade-</h3><br><br>
+let changelog = `<h3>End Game At -A Month upgrade-</h3><br><br>
 	<h1>Changelog:</h1><br><br>
 	<h4>V1.1 Only Fun times</h4><br>
 		- Days Upgrade<br>
