@@ -45,6 +45,12 @@ addLayer("d", {
             cost: new Decimal(1),
             unlocked() { return hasUpgrade('d',13)},
         },
+	21: {
+            title:"A Month",
+            cost: new Decimal(31),
+            unlocked() { return hasUpgrade('d',14)},
+        },
+	    
     },
     layerShown(){return true}
 })
