@@ -29,25 +29,30 @@ addLayer("d", {
         11: {
             title:"Half A Day",
             cost: new Decimal(1),
+	    description:"Wait half a day for a day",
         },
         12: {
             title:"Half A Half A Day",
             cost: new Decimal(1),
+	    description:"Wait half a half a day for a day",
             unlocked() { return hasUpgrade('d',11)},
         },
         13: {
             title:"Half A Half A Half A Day",
             cost: new Decimal(1),
+	    description:"Wait half a half a half a day for a day",
             unlocked() { return hasUpgrade('d',12)},
         },
         14: {
             title:"1 HOUR????????",
             cost: new Decimal(1),
+	    description:"One hour days what?",
             unlocked() { return hasUpgrade('d',13)},
         },
 	21: {
             title:"A Month",
             cost: new Decimal(31),
+	    description:"Unlock Months<br>Current Endgame",
             unlocked() { return hasUpgrade('d',14)},
         },
 	    
