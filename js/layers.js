@@ -9,6 +9,7 @@ addLayer("d", {
     color: "#ffffff",
     requires: new Decimal(86400), // Can be a function that takes requirement increases into account
     resource: "Days", // Name of prestige currency
+    leftTab() {return false},
     baseResource: "Fun Points", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     canbuymax() {return false},
@@ -53,7 +54,7 @@ addLayer("d", {
         21: {
             title:"A Month",
             cost: new Decimal(31),
-            description:"Unlock Months",
+            description:"Unlock Months<br>Also Makes Fun Point Gain 69",
             unlocked() { return hasUpgrade('d',14)},
         },
     },
@@ -170,9 +171,9 @@ addLayer("m", {
                 ["row", [["milestone", 9],["milestone", 10], ["milestone", 11]],],
     ],
     hotkeys: [
-        {key: "m", description: "M: Reset for months", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "m", description: "M: Reset for months", onPress(){if (canReset(this.layer) && hasMilestone("m",0)) doReset(this.layer)}},
     ],
 
-    layerShown(){return true}
+    layerShown(){return hasMilestone("m", 0) || hasUpgrade("d", 21) }
 })
 
