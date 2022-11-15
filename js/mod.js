@@ -2,37 +2,51 @@ let modInfo = {
 	name: "A Fun And Interactive Idle Game",
 	id: "AFAIIG",
 	author: "RTXT25",
-	pointsName: "fun points",
+	pointsName: "fun pOints",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
 	discordLink: "",
-	initialStartPoints: new Decimal (10), // Used for hard resets and new players
+	initialStartPoints: new Decimal (1), // Used for hard resets and new players
 	offlineLimit: 99999999999999999999999999999,  // In hours
 }
 
 // Set your version in num and name
 let VERSION = {
-	num: "2.o",
+	num: "2.one",
 	name: "13 Month Till Christmass",
 }
 
 let changelog = `<h2>-Endgame At "December" Milestone-</h3><br><br>
 	<h1>Changelog:</h1><br><br>
+	<h3>v2.one 13 Months Till Christmass</h3><br>
+		+ "A month" Upgrade now makes Fun Point Gain 69<br>
+		+ Months Now Add To Point Gain<br>
+		* Made The O in fun pOints capital<br>
+		* Fixed Months Unlocking<br>
+		<br>
+
 	<h2>v2.0 13 Months Till Christmass</h2><br>
-		+ Added Months Layer<br><br>
+		+ Added Months Layer<br>
+		+ Added Months Currency<br>
+		+ Added 12 Months Milestones<br>
+		<br>
 
 	<h3>v1.3 Only Fun Times</h4><br>
 		* Fix Days Prestige<br>
+		<br>
 
 	<h3>v1.2 Only Fun Times</h4><br>
-		+ Day Upgrades have descriptions<br><br>
+		+ Added Description For Days Upgrades<br>
+		<br>
 
 	<h3>v1.1 Only Fun times</h4><br>
-		+ Days Upgrade<br><br>
+		+ Added 1 Days Upgrade<br>
+		<br>
 		
 	<h2>v1.0 Only Fun Times</h3><br>
 		+ Added Days<br>
+		+ Added 4 Days Upgrades<br>
 		`
 
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
@@ -60,6 +74,10 @@ function getPointGen() {
 	if (hasUpgrade('d', 12)) gain = gain.times(2)
 	if (hasUpgrade('d', 13)) gain = gain.times(2)
 	if (hasUpgrade('d', 14)) gain = gain.times(3)
+	if (hasUpgrade('d', 21)) gain = gain.times(0)
+	if (hasUpgrade('d', 21)) gain = gain.add(69)
+
+	gain = gain.add(player.m.points)
 
 	return gain
 }
