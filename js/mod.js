@@ -75,7 +75,7 @@ function canGenPoints(){
 function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
-	let gain = new Decimal(10000000000000)
+	let gain = new Decimal(1)
 	
 	if (hasUpgrade('d', 11)) gain = gain.times(2)
 	if (hasUpgrade('d', 12)) gain = gain.times(2)
