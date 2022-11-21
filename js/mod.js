@@ -3,7 +3,7 @@ let modInfo = {
 	id: "AFAIIG",
 	author: "RTXT25",
 	pointsName: "fun pOints",
-	modFiles: ["layers.js", "tree.js"],
+	modFiles: ["layers.js", "tree.js","aids.js"],
 
 	discordName: "",
 	discordLink: "",
@@ -13,12 +13,18 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "2.one",
+	num: "2.two",
 	name: "13 Month Till Christmass",
 }
 
 let changelog = `<h2>-Endgame At "December" Milestone-</h3><br><br>
 	<h1>Changelog:</h1><br><br>
+	<h3>v2.two 13 Months Till Christmass</h3><br>
+		+ Added AchiveMents<br>
+		+ Added AchiveMents Tab In AchiveMents<br>
+		+ Added Info Tab In AchiveMents<br>
+		+ Added BALLS Tab In AchiveMents<br>
+		<br>
 	<h3>v2.one 13 Months Till Christmass</h3><br>
 		+ "A month" Upgrade now makes Fun Point Gain 69<br>
 		+ Months Now Add To Point Gain<br>
@@ -26,7 +32,7 @@ let changelog = `<h2>-Endgame At "December" Milestone-</h3><br><br>
 		* Fixed Months Unlocking<br>
 		<br>
 
-	<h2>v2.0 13 Months Till Christmass</h2><br>
+	<h2>v</h2><h2 style="color:red">2.o </h2><h2>13 Months Till Christmass</h2><br>
 		+ Added Months Layer<br>
 		+ Added Months Currency<br>
 		+ Added 12 Months Milestones<br>
@@ -44,9 +50,10 @@ let changelog = `<h2>-Endgame At "December" Milestone-</h3><br><br>
 		+ Added 1 Days Upgrade<br>
 		<br>
 		
-	<h2>v1.0 Only Fun Times</h3><br>
+	<h2>v</h2><h2 style="color:red">1.0 </h2><h2 style="color:lime"> Only Fun Times</h2><br>
 		+ Added Days<br>
 		+ Added 4 Days Upgrades<br>
+		<br>
 		`
 
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
@@ -68,7 +75,7 @@ function canGenPoints(){
 function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
-	let gain = new Decimal(1)
+	let gain = new Decimal(10000000000000)
 	
 	if (hasUpgrade('d', 11)) gain = gain.times(2)
 	if (hasUpgrade('d', 12)) gain = gain.times(2)
